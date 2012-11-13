@@ -53,3 +53,12 @@ section > h1 {
 section ul {
   margin-left: 20px;
 }
+
+.out-of-view {
+}
+
+.out-of-view.left {
+}
+
+.out-of-view.right {
+}
