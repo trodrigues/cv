@@ -92,6 +92,27 @@ article > .dates {
   font-size: 0.8em;
 }
 
+#other > section {
+  margin-bottom: 60px;
+}
+
+#publicspeaking h1,
+#events h1,
+#organizations h1 {
+  font-size: 1.6em;
+}
+
+#publicspeaking article > h1,
+#organizations article > h1 {
+  font-size: 1.3em;
+}
+
+#publicspeaking article,
+#organizations article {
+  margin-bottom: 30px;
+}
+
+/* TODO add some transitions */
 .out-of-view {
   display: none;
 }
