@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Asap|Montaga|Ruluko|Rosario);
+
 * {
   padding: 0;
   margin: 0;
@@ -15,6 +17,14 @@
   padding-right: 100px;
 }
 
+a {
+  text-decoration: none;
+}
+
+a {
+  color: #bd6330;
+}
+
 nav {
   position: fixed;
   top: 4%;
@@ -27,10 +37,17 @@ nav ul {
 
 nav li {
   margin-bottom: 10px;
+  font-family: 'Asap', sans-serif;
+}
+
+nav a {
+  color: #b4813b;
 }
 
 h1 {
   font-weight: 900;
+  font-family: 'Asap', sans-serif;
+  color: #be4426;
 }
 
 p {
