@@ -112,6 +112,7 @@ article > .dates {
   margin-bottom: 30px;
 }
 
+/* TODO add some transitions */
 .out-of-view {
   display: none;
 }
