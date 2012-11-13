@@ -16,8 +16,8 @@
 }
 
 nav {
-  position: absolute;
-  top: 0;
+  position: fixed;
+  top: 4%;
   left: 4%;
 }
 
@@ -55,9 +55,11 @@ section ul {
 }
 
 .out-of-view {
+  display: none;
 }
 
 .out-of-view.left {
+
 }
 
 .out-of-view.right {

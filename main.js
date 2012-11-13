@@ -3,6 +3,12 @@
 var nav = document.getElementById('nav');
 var mainSections = document.querySelectorAll('#content > section');
 
+function scrollToTop() {
+  setTimeout(function() {
+    window.scroll(0, 0);
+  }, 0);
+}
+
 function getInitialSection() {
   return (window.location.hash.indexOf('#') > -1) ?
           window.location.hash.replace(/#/, '') :
@@ -34,12 +40,12 @@ function setupSections() {
 
 function navHandler(ev) {
   if(ev.target.tagName.toLowerCase() === 'a'){
+
     var targetParts = ev.target.href.match(/#(.*)/),
         targetId = (targetParts.length > 0) ? targetParts[1] : null,
         foundTarget = false;
 
     loopSections(function(section) {
-      console.log(section.id, targetId);
       if(section.id === targetId){
         foundTarget = true;
         section.className = '';
@@ -47,10 +53,13 @@ function navHandler(ev) {
         setSectionClassIf(section, foundTarget);
       }
     });
+
+    scrollToTop();
   }
 }
 
 nav.addEventListener('click', navHandler, false);
 setupSections();
+scrollToTop();
 
 }());
