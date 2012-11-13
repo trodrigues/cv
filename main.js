@@ -9,21 +9,44 @@ function getInitialSection() {
           'about';
 }
 
+function loopSections(cb) {
+  for(var i=0, l=mainSections.length; i<l; i++){
+    cb(mainSections[i]);
+  }
+}
+
+function setSectionClassIf(section, condition) {
+  section.className = 'out-of-view ' + (condition ? 'right' : 'left');
+}
+
 function setupSections() {
   var initialSection = getInitialSection(),
       foundInitial = false;
 
-  for(var i=0, l=mainSections.length; i<l; i++){
-    if(mainSections[i].id === initialSection) {
+  loopSections(function(section) {
+    if(section.id === initialSection) {
       foundInitial = true;
     } else {
-      mainSections[i].className = 'out-of-view ' + (foundInitial ? 'right' : 'left');
+      setSectionClassIf(section, foundInitial);
     }
-  }
+  });
 }
 
 function navHandler(ev) {
   if(ev.target.tagName.toLowerCase() === 'a'){
+    var targetParts = ev.target.href.match(/#(.*)/),
+        targetId = (targetParts.length > 0) ? targetParts[1] : null,
+        foundTarget = false;
+
+    loopSections(function(section) {
+      console.log(section.id, targetId);
+      if(section.id === targetId){
+        foundTarget = true;
+        section.className = '';
+      } else {
+        setSectionClassIf(section, foundTarget);
+      }
+    });
   }
 }
 
