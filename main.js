@@ -9,11 +9,13 @@ function scrollToTop() {
   }, 0);
 }
 
+
 function getInitialSection() {
   return (window.location.hash.indexOf('#') > -1) ?
           window.location.hash.replace(/#/, '') :
           'about';
 }
+
 
 function loopSections(cb) {
   for(var i=0, l=mainSections.length; i<l; i++){
@@ -21,9 +23,11 @@ function loopSections(cb) {
   }
 }
 
+
 function setSectionClassIf(section, condition) {
   section.className = 'out-of-view ' + (condition ? 'right' : 'left');
 }
+
 
 function setupSections() {
   var initialSection = getInitialSection(),
@@ -37,6 +41,7 @@ function setupSections() {
     }
   });
 }
+
 
 function navHandler(ev) {
   if(ev.target.tagName.toLowerCase() === 'a'){
@@ -57,6 +62,7 @@ function navHandler(ev) {
     scrollToTop();
   }
 }
+
 
 nav.addEventListener('click', navHandler, false);
 setupSections();
