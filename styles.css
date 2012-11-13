@@ -50,9 +50,13 @@ h1 {
   color: #be4426;
 }
 
-p {
-  line-height: 1.3em;
+section > div, p {
+  line-height: 1.4em;
   margin-bottom: 0.7em;
+}
+
+article > h2, strong {
+  font-weight: 600;
 }
 
 #content > section {
@@ -63,12 +67,29 @@ p {
   font-size: 2.2em;
 }
 
+#content > section > article {
+  margin-bottom: 100px;
+}
+
 section > h1 {
   margin-bottom: 0.8em;
 }
 
 section ul {
   margin-left: 20px;
+}
+
+section ul li {
+  margin-bottom: 0.5em;
+}
+
+.contact > strong {
+  font-weight: 500;
+}
+
+article > .dates {
+  padding-top: 0.2em;
+  font-size: 0.8em;
 }
 
 .out-of-view {
