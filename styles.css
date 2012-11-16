@@ -17,6 +17,10 @@
   padding-right: 100px;
 }
 
+.page-break {
+  display: none;
+}
+
 a {
   text-decoration: none;
 }

@@ -1,0 +1,22 @@
+#nav {
+  display: none;
+}
+
+#content {
+  padding-left: 50px;
+}
+
+#content > section {
+  margin-bottom: 50px;
+}
+
+.out-of-view {
+  display: block;
+}
+
+.page-break {
+  display: block;
+  page-break-before: always;
+  height: 40px;
+}
+
