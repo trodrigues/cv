@@ -1,2 +1,2 @@
 #!/bin/bash
-cp index.html styles.css main.js public/
+cp index.html *.css *.js public/
