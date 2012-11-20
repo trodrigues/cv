@@ -18,6 +18,10 @@ app.router.get('/', function () {
       data = data.replace(/<!--HIDDEN-->(.|\n|\r)*<!--\/HIDDEN-->/gm, '');
     }
 
+    if(self.req.query.nojs){
+      data = data.replace(/<!--NOJS-->(.|\n|\r)*<!--\/NOJS-->/gm, '');
+    }
+
     self.res.statusCode = 200;
     self.res.setHeader('Content-Length', data.length);
     self.res.setHeader('Content-Type', 'text/html');
