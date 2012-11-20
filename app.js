@@ -22,6 +22,14 @@ app.router.get('/', function () {
       data = data.replace(/<!--NOJS-->(.|\n|\r)*<!--\/NOJS-->/gm, '');
     }
 
+    if(self.req.query.onefile){
+      var css = fs.readFileSync(__dirname + '/public/styles.css');
+      var js = fs.readFileSync(__dirname + '/public/main.js');
+      data = data.replace(/<link.*"all".*>/g, '<style>\n'+ css + '\n</style>');
+      data = data.replace(/<link.*"print".*>/g, '');
+      data = data.replace(/<script.*"main\.js".*><\/script>/g, '<script>\n'+ js +'\n</script>');
+    }
+
     self.res.statusCode = 200;
     self.res.setHeader('Content-Length', data.length);
     self.res.setHeader('Content-Type', 'text/html');
