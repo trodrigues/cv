@@ -1,6 +1,6 @@
 cv
 ==
 
-My cv/resume1
+My cv/resume
 
 http://cv.trodrigues.net
