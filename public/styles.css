@@ -26,29 +26,6 @@ a:hover {
   text-decoration: underline;
 }
 
-nav {
-  position: fixed;
-  top: 4%;
-  left: 4%;
-}
-
-nav ul {
-  list-style-type: none;
-}
-
-nav li {
-  margin-bottom: 10px;
-  font-family: 'Asap', sans-serif;
-}
-
-nav a {
-  color: #b4813b;
-}
-
-nav a:hover {
-  text-decoration: none;
-}
-
 h1 {
   font-weight: 900;
   font-family: 'Asap', sans-serif;
@@ -78,6 +55,37 @@ ul li {
   margin-bottom: 0.5em;
 }
 
+section {
+  margin-bottom: 200px;
+}
+
+section > article {
+  margin-bottom: 100px;
+}
+
+nav {
+  position: fixed;
+  top: 4%;
+  left: 4%;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav li {
+  margin-bottom: 10px;
+  font-family: 'Asap', sans-serif;
+}
+
+nav a {
+  color: #b4813b;
+}
+
+nav a:hover {
+  text-decoration: none;
+}
+
 /****
   reusable classes
 ****/
@@ -102,6 +110,10 @@ ul li {
   margin-bottom: 30px;
 }
 
+.skills {
+  margin-bottom: 30px;
+}
+
 /* TODO add some transitions */
 .out-of-view {
   display: none;
@@ -114,7 +126,6 @@ ul li {
 .out-of-view.right {
 }
 
-
 /****
   main layout
 */
@@ -124,19 +135,4 @@ ul li {
   margin-top: 40px;
   padding-left: 250px;
   padding-right: 100px;
-}
-
-#content > section {
-  margin-bottom: 200px;
-}
-
-#content > section > article {
-  margin-bottom: 100px;
-}
-
-/****
-  sections
-****/
-#skills div {
-  margin-bottom: 30px;
 }
